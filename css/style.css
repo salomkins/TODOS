@@ -1,0 +1,45 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container{
+  background: linear-gradient(#ccc, #fff);
+}
+
+.header{
+  color: #ead7d8;
+  text-align: center;
+  padding: 25px;
+  font-size: 90px;
+  font-weight: 200;
+}
+
+.container-field{
+  width: 550px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow:
+        0 1px 1px rgba(0,0,0,0.15),
+        0 10px 0 -5px #f6f6f6,
+        0 10px 1px -4px rgba(0,0,0,0.15),
+        0 20px 0 -10px #f6f6f6,
+        0 20px 1px -9px rgba(0,0,0,0.15);
+}
+
+.form-header, .list-item{
+  height: 60px;
+  width: 550px;
+  border: 1px solid #e6e6e6;
+  font-size: 20px;
+  line-height: 60px;
+  font-weight: 300;
+}
+
+.form-header{
+  color: #ebebeb;
+  font-style: italic;
+}
+
+.list-item{
+  color: #909090;
+}
