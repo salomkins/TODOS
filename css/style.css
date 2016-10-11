@@ -3,11 +3,11 @@
 }
 body{
   font-family: 'Roboto', sans-serif;
+  background: #f4f4f4;
 }
 
 .container-main{
   height: 100%;
-  background: #f4f4f4;
 }
 
 .header{
@@ -85,10 +85,21 @@ input[type=checkbox] {
 
 .close-button-container{
   float: right;
+  position: relative;
+  height: 60px;
+  width: 40px;
 }
 
-.close-button-container button{
-  color: #b56569;
+.close-button{
   cursor: pointer;
+  color: #b56569;
+  position: absolute;
   top: 50%;
+  transform: translateY(-50%);
+  visibility: hidden;
+
+}
+
+.close-button-container:hover .close-button{
+  visibility: visible;;
 }
