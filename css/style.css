@@ -6,8 +6,13 @@ body{
   background: #f4f4f4;
 }
 
+input, button{
+  font-family: 'Roboto', sans-serif;
+}
+
 .container-main{
-  height: 100%;
+  width: 550px;
+  margin: 0 auto;
 }
 
 .header{
@@ -19,8 +24,6 @@ body{
 }
 
 .container-field{
-  width: 550px;
-  margin: auto;
   background-color: #fff;
   box-shadow:
         0 1px 1px rgba(0,0,0,0.15),
@@ -30,16 +33,16 @@ body{
         0 20px 1px -9px rgba(0,0,0,0.15);
 }
 
-.dropdown-button, .form-header, .check-circle, .list-item{
-  display: inline-block;
-}
-
 .list-row{
-  height: 60px;
-  width: 100%;
   border: 1px solid #e6e6e6;
   font-size: 20px;
   font-weight: 300;
+  position: relative;
+  padding-left: 10px;
+}
+
+.dropdown-button, .form-header{
+  display: inline-block;
 }
 
 .dropdown-button{
@@ -49,6 +52,23 @@ body{
   color: #e6e6e6;
 }
 
+
+.dropdown-button .fa-chevron-up,
+.dropdown-button:hover .fa-chevron-down {
+    display: none;
+}
+
+.dropdown-button:hover .fa-chevron-up {
+    display: block;
+}
+
+.list-heading{
+  color: #e6e6e6;
+  font-style: italic;
+  border: none;
+  outline: none;
+}
+
 .list-row button{
   border: none;
   background: none;
@@ -56,50 +76,128 @@ body{
   outline: none;
 }
 
-.form-header{
+::-webkit-input-placeholder {
   color: #ebebeb;
-  font-style: italic;
-  line-height: 60px;
+  font-weight: 300;
+}
+::-moz-placeholder {
+  color: #ebebeb;
+  font-weight: 300;
+}
+:-ms-input-placeholder {
+  color: #ebebeb;
+  font-weight: 300;
+}
+:-moz-placeholder {
+  color: #ebebeb;
+  font-weight: 300;
 }
 
-.list-item{
-  color: #909090;
-  line-height: 60px;
+.checkbox-circle{
+  width: 50px;
+  float: left;
+  position: absolute;
+  display: none;
 }
 
-.form-footer{
-  height: 40px;
-  width: 100%;
-  border: 1px solid #e6e6e6;
+.checkbox-circle:checked ~ .checked-item {
+    color: #6ec9ba;
+    border-color: #6ec9ba;
 }
 
-
-input[type=checkbox] {
-  /*visibility: hidden;*/
-    }
-
-.strikethrough:checked + span{
-  text-decoration:line-through;
-  color: #e0e0e0;
+.checkbox-circle:checked ~ .task{
+  text-decoration: line-through;
+  color: #d9d9d9;
 }
 
-.close-button-container{
-  float: right;
-  position: relative;
-  height: 60px;
-  width: 40px;
+.checked-item{
+  position: absolute;
+  color: transparent;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #f5f5f5;
+  border-radius: 50px;
+  display: block;
+}
+
+.task{
+  border: none;
+  color: #4d4d4d;
+  font-size: 20px;
+  padding-right: 60px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-left: 40px;
+}
+
+.task:focus{
+  outline:1px solid #999999;
+  -moz-box-shadow:    inset 0 0 5px #999999;
+  -webkit-box-shadow: inset 0 0 5px #999999;
+  box-shadow:         inset 0 0 5px #999999;
+}
+
+.task:focus ~ .checked-item{
+  display: none;
 }
 
 .close-button{
   cursor: pointer;
   color: #b56569;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   visibility: hidden;
-
+  width: 30px;
+  height: 30px;
+  top: 15px;
+  right: 10px;
 }
 
-.close-button-container:hover .close-button{
+.list-row:hover .close-button{
   visibility: visible;;
+}
+
+.form-footer{
+  padding: 15px;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  text-align: center;
+}
+
+
+.footer-nav{
+  width: 50%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.remaining-items{
+  float: left;
+  margin-top: 2px;
+}
+
+.remaining-items, .clear-completed button, .filters button{
+  text-decoration: none;
+  font-size: 14px;
+  color: #a0a0a0;
+  font-weight: 300;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+
+.filter-button:hover, .filter-button.active{
+  border: 1px solid #efd5d6;
+  border-radius: 3px;
+}
+
+.clear-completed{
+  float: right;
+  font-weight: 300;
 }
