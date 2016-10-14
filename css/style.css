@@ -15,7 +15,7 @@ input, button{
   margin: 0 auto;
 }
 
-.header{
+.header-main{
   color: #ead7d8;
   text-align: center;
   padding: 25px;
@@ -41,7 +41,7 @@ input, button{
   padding-left: 10px;
 }
 
-.dropdown-button, .form-header{
+.dropdown-button, .header-form{
   display: inline-block;
 }
 
@@ -94,7 +94,6 @@ input, button{
 }
 
 .checkbox-circle{
-  width: 50px;
   float: left;
   position: absolute;
   display: none;
@@ -126,10 +125,7 @@ input, button{
 }
 
 .task{
-  border: none;
-  color: #4d4d4d;
   font-size: 20px;
-  padding-right: 60px;
   padding-left: 20px;
   padding-bottom: 20px;
   padding-top: 20px;
@@ -165,14 +161,11 @@ input, button{
 .form-footer{
   padding: 15px;
   border: 1px solid #e6e6e6;
-  position: relative;
   text-align: center;
 }
 
 
 .footer-nav{
-  width: 50%;
-  margin: 0 auto;
   display: inline-block;
 }
 
@@ -182,7 +175,6 @@ input, button{
 }
 
 .remaining-items, .clear-completed button, .filters button{
-  text-decoration: none;
   font-size: 14px;
   color: #a0a0a0;
   font-weight: 300;
@@ -199,5 +191,4 @@ input, button{
 
 .clear-completed{
   float: right;
-  font-weight: 300;
 }
