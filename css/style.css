@@ -12,6 +12,7 @@ input, button{
 
 .container-main{
   width: 550px;
+  padding-bottom: 50px;
   margin: 0 auto;
 }
 
@@ -39,6 +40,26 @@ input, button{
   font-weight: 300;
   position: relative;
   padding-left: 10px;
+}
+
+.is-completed .task{
+  text-decoration: line-through;
+  color: #d9d9d9;
+}
+
+.is-hovered .close-button{
+  visibility: visible;
+}
+
+.is-editing .checked-item{
+  visibility: hidden;
+}
+
+.is-editing .task{
+  outline:1px solid #999999;
+  -moz-box-shadow:    inset 0 0 5px #999999;
+  -webkit-box-shadow: inset 0 0 5px #999999;
+  box-shadow:         inset 0 0 5px #999999;
 }
 
 .dropdown-button, .header-form{
@@ -104,10 +125,10 @@ input, button{
     border-color: #6ec9ba;
 }
 
-.checkbox-circle:checked ~ .task{
+/*.checkbox-circle:checked ~ .task{
   text-decoration: line-through;
   color: #d9d9d9;
-}
+}*/
 
 .checked-item{
   position: absolute;
@@ -132,14 +153,14 @@ input, button{
   margin-left: 40px;
 }
 
-.task:focus{
+/*.task:focus{
   outline:1px solid #999999;
   -moz-box-shadow:    inset 0 0 5px #999999;
   -webkit-box-shadow: inset 0 0 5px #999999;
   box-shadow:         inset 0 0 5px #999999;
-}
+}*/
 
-.task:focus ~ .checked-item{
+.task:focus ~ .hidden{
   display: none;
 }
 
@@ -154,9 +175,9 @@ input, button{
   right: 10px;
 }
 
-.list-row:hover .close-button{
+/*.list-row:hover .close-button{
   visibility: visible;;
-}
+}*/
 
 .form-footer{
   padding: 15px;
