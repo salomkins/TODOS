@@ -27,7 +27,7 @@
             $(".clear-completed").on("click", clearTasks);
             $("#activeBtn").on("click", showActive);
             $("#completedBtn").on("click", showCompleted);
-            $("#allBtn").on("click", showAll;
+            $("#allBtn").on("click", showAll);
             $(".dropdown-button").on("click", completeAll);
             $(".task")
                 .dblclick(editTaskStart)
